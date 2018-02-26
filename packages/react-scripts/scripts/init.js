@@ -35,12 +35,16 @@ module.exports = function(
   // Copy over some of the devDependencies
   appPackage.dependencies = appPackage.dependencies || {};
 
+  // add lib/index
+  appPackage.main = 'lib/index';
+
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
+    transpile: 'react-scripts transpile',
   };
 
   fs.writeFileSync(
