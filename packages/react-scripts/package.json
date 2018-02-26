@@ -1,6 +1,6 @@
 {
   "name": "@medeo/react-scripts",
-  "version": "1.1.7-beta.1",
+  "version": "1.1.7-beta.3",
   "description": "Configuration and scripts for Create React App.",
   "repository": "@medeo/create-react-app",
   "license": "MIT",
@@ -20,7 +20,18 @@
   "bin": {
     "react-scripts": "./bin/react-scripts.js"
   },
+  "babel": {
+    "presets":[
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-flow"
+    ]
+  },
   "dependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-flow": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",

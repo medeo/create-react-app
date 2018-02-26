@@ -2,6 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { configureStore, history } from './store'
+import sagas from './sagas'
+import ducks from './reducers'
+
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import { injectGlobal, ThemeProvider } from 'styled-components'
@@ -27,3 +30,9 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
+
+export default {
+  sagas,
+  ducks,
+  App
+}
