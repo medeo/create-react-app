@@ -22,11 +22,6 @@
   },
 
   "dependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "@babel/preset-flow": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
@@ -58,13 +53,6 @@
     "promise": "8.0.1",
     "raf": "3.4.0",
     "react-dev-utils": "^5.0.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^5.0.0-alpha.9",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.0",
     "style-loader": "0.19.0",
     "styled-components": "^3.1.6",
     "sw-precache-webpack-plugin": "0.11.4",
@@ -75,8 +63,23 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-flow": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.0",
+    "styled-components": "^3.1.6"
   },
   "optionalDependencies": {
     "fsevents": "^1.1.3"
