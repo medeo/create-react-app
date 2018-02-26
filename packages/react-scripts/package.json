@@ -20,13 +20,7 @@
   "bin": {
     "react-scripts": "./bin/react-scripts.js"
   },
-  "babel": {
-    "presets":[
-      "@babel/preset-env",
-      "@babel/preset-react",
-      "@babel/preset-flow"
-    ]
-  },
+
   "dependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
