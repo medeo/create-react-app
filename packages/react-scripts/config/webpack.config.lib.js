@@ -31,7 +31,6 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
-console.log(paths)
 module.exports = {
   // Don't attempt to continue if there are any errors.
   bail: true,

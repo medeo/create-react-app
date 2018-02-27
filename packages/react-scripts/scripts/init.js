@@ -33,8 +33,9 @@ module.exports = function(
   const useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
 
   // Copy over some of the devDependencies
-  appPackage.dependencies = appPackage.dependencies || {};
 
+  appPackage.dependencies = appPackage.dependencies || {};
+  console.log(appPackage)
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
@@ -124,9 +125,9 @@ module.exports = function(
 
   // Install react and react-dom for backward compatibility with old CRA cli
   // which doesn't install react and react-dom along with react-scripts
-  // or template is presetend (via --internal-testing-template)
-  if (!isReactInstalled(appPackage) || template) {
-    console.log(`Installing react and react-dom using ${command}...`);
+  // or template is presented (via --internal-testing-template)
+ // if (!isReactInstalled(appPackage) || template) {
+    console.log(`Installing ${chalk.blue('@medeo')} deps using ${command}...`);
     console.log();
 
     const proc = spawn.sync(command, args, { stdio: 'inherit' });
@@ -134,7 +135,7 @@ module.exports = function(
       console.error(`\`${command} ${args.join(' ')}\` failed`);
       return;
     }
-  }
+  //}
 
   // Display the most elegant way to cd.
   // This needs to handle an undefined originalDirectory for
