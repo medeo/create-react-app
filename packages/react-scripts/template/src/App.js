@@ -1,14 +1,36 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { configureStore, history } from './store'
+import { ConnectedRouter } from 'react-router-redux'
+import { Provider } from 'react-redux'
+import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 
+import theme from './theme'
 
-const App = ({className} ) => (
-  <div className={className}>
-    <p>Hello <strong>Medeo</strong></p>
-  </div>
+injectGlobal`
+  // place the font-faces here
+  body {
+    margin: 0; 
+  }
+`
+
+const store = configureStore()
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <ThemeProvider theme={theme}>
+        <StyledDiv>
+          <p>Hello <strong>Medeo</strong></p>
+        </StyledDiv>
+      </ThemeProvider>
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
 )
 
-export default styled(App)`
+
+const StyledDiv =  styled.div`
   display: flex;
   width: 100vm;
   height:  100vh;
