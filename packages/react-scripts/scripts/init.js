@@ -101,6 +101,11 @@ module.exports = function(
   }
   args.push('react', 'react-dom');
 
+  // additionnal redux and react-router scripts
+
+  args.push('react-redux', 'react-router', 'react-router-dom', 'react-router-redux@next', 'redux', 'redux-logger', 'redux-saga', 'styled-components');
+
+
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
     appPath,
