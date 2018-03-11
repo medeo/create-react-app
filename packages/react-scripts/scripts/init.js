@@ -33,9 +33,11 @@ module.exports = function(
   const useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
 
   // Copy over some of the devDependencies
-
   appPackage.dependencies = appPackage.dependencies || {};
-  console.log(appPackage)
+
+  // add lib/index
+  appPackage.main = 'lib/index';
+
   // Setup the script rules
   appPackage.scripts = {
     start: 'react-scripts start',
@@ -106,7 +108,6 @@ module.exports = function(
   // additionnal redux and react-router scripts
 
   args.push('react-redux', 'react-router', 'react-router-dom', 'react-router-redux@next', 'redux', 'redux-logger', 'redux-saga', 'styled-components');
-  console.log(args);
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
