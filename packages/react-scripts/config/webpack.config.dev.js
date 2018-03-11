@@ -214,15 +214,23 @@ module.exports = {
             ],
           },
           {
-            loader: "react-svg-loader",
-            options: {
-              svgo: {
-                plugins: [
-                  { removeTitle: false }
-                ],
-                floatPrecision: 2
+            test: /\.svg$/,
+            use: [
+              {
+                loader: "babel-loader"
+              },
+              {
+                loader: "react-svg-loader",
+                options: {
+                  svgo: {
+                    plugins: [
+                      { removeTitle: false }
+                    ],
+                    floatPrecision: 2
+                  }
+                }
               }
-            }
+            ]
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.

@@ -240,15 +240,23 @@ module.exports = {
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
           },
           {
-            loader: "react-svg-loader",
-            options: {
-              svgo: {
-                plugins: [
-                  { removeTitle: false }
-                ],
-                floatPrecision: 2
+            test: /\.svg$/,
+            use: [
+              {
+                loader: "babel-loader"
+              },
+              {
+                loader: "react-svg-loader",
+                options: {
+                  svgo: {
+                    plugins: [
+                      { removeTitle: false }
+                    ],
+                    floatPrecision: 2
+                  }
+                }
               }
-            }
+            ]
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
